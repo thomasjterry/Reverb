@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverb Conference | Echoing the Glory of God</title>
+    <meta name="description" content="Biblical worship training for worship leaders, musicians, and pastors. Grounded in the Regulative Principle.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --charcoal: #4A4A48;
+            --mid-gray: #7A7A78;
+            --light-gray: #8A8A88;
+            --warm-bg: #E8E8E5;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: var(--warm-bg);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .sans {
+            font-family: 'Libre Franklin', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: var(--charcoal);
+            color: var(--warm-bg);
+            padding: 30px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--warm-bg);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 40px;
+            background: var(--charcoal);
+            color: var(--warm-bg);
+        }
+
+        .hero-mark {
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 72px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .hero .subtitle {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 40px;
+        }
+
+        .hero .tagline {
+            font-size: 28px;
+            font-style: italic;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            margin-bottom: 60px;
+        }
+
+        .cta-button {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background: var(--warm-bg);
+            color: var(--charcoal);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Section */
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+
+        section h2 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        blockquote {
+            font-size: 28px;
+            font-style: italic;
+            line-height: 1.5;
+            margin: 60px 0;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        /* Speakers */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            margin-top: 80px;
+        }
+
+        .speaker {
+            text-align: center;
+        }
+
+        .speaker h3 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .speaker p {
+            font-size: 16px;
+            opacity: 0.7;
+        }
+
+        /* Topics */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .topic {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .topic h3 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .topic p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--warm-bg);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero .tagline {
+                font-size: 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 60px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">REVERB</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-mark">
+            <svg width="240" height="240" viewBox="0 0 240 240">
+                <rect x="0" y="0" width="240" height="240" fill="#FFFFFF"/>
+                <path d="M 0,120 Q 40,88 80,104 Q 120,120 160,92 Q 200,64 240,104" 
+                      fill="none" stroke="#4A4A48" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h1>REVERB CONFERENCE</h1>
+        <p class="subtitle">2026</p>
+        <p class="tagline">Echoing the Glory of God</p>
+        <a href="#register" class="cta-button">Register Now</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About</h2>
+        <p>In an age where worship has become entertainment and theology has been replaced by experience, Reverb Conference exists to call the church back to biblical, God-centered worship.</p>
+        <blockquote>"Biblical worship that echoes the glory of God."</blockquote>
+        <p>We equip worship leaders, musicians, tech teams, and pastors with sound doctrine and faithful practice. Grounded in the Regulative Principle, we help churches worship in a way that honors Scripture, exalts Christ, and glorifies God alone.</p>
+    </section>
+
+    <!-- Speakers -->
+    <section id="speakers">
+        <h2>Speakers</h2>
+        <div class="speakers-grid">
+            <div class="speaker">
+                <h3>Sean DeMars</h3>
+                <p>Pastor & Worship Leader</p>
+            </div>
+            <div class="speaker">
+                <h3>Thomas Terry</h3>
+                <p>Pastor & Creative Director</p>
+            </div>
+            <div class="speaker">
+                <h3>Luke Hill</h3>
+                <p>Worship Pastor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics -->
+    <section id="topics">
+        <h2>Topics</h2>
+        <div class="topics-grid">
+            <div class="topic">
+                <h3>The Regulative Principle</h3>
+                <p>Understanding biblical worship from Scripture. What does God require? How do we worship in a way that honors Him?</p>
+            </div>
+            <div class="topic">
+                <h3>Theology of Singing</h3>
+                <p>Why we sing, what we sing, and how corporate worship shapes the church. Exploring the biblical foundation for congregational song.</p>
+            </div>
+            <div class="topic">
+                <h3>Beauty in Simplicity</h3>
+                <p>Recovering faithful worship in a culture of performance. How simplicity serves the gospel and glorifies God.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register -->
+    <section id="register" style="text-align: center; background: var(--white); border-radius: 8px; padding: 80px 60px;">
+        <h2>Register</h2>
+        <p>Join us for a one-day worship training conference.</p>
+        <p style="margin-top: 40px;"><a href="mailto:info@reverbconference.com" class="cta-button">Get Notified</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Reverb Conference © 2026 • Echoing the Glory of God</p>
+    </footer>
+</body>
+</html>
