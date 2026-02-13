@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -18,17 +18,16 @@
         }
 
         :root {
-            --charcoal: #4A4A48;
-            --mid-gray: #7A7A78;
-            --light-gray: #8A8A88;
-            --warm-bg: #E8E8E5;
+            --black: #000000;
             --white: #FFFFFF;
+            --bg-gray: #F8F8F8;
+            --text-gray: #666666;
         }
 
         body {
-            font-family: Georgia, serif;
-            background: var(--warm-bg);
-            color: var(--charcoal);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-gray);
+            color: var(--black);
             line-height: 1.6;
             scroll-behavior: smooth;
         }
@@ -54,18 +53,15 @@
             }
         }
 
-        .sans {
-            font-family: 'Libre Franklin', sans-serif;
-        }
-
         /* Header */
         header {
-            background: var(--charcoal);
-            color: var(--warm-bg);
+            background: var(--white);
+            color: var(--black);
             padding: 30px 40px;
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid #E0E0E0;
         }
 
         nav {
@@ -77,10 +73,9 @@
         }
 
         .logo {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
         }
 
         nav ul {
@@ -90,14 +85,11 @@
         }
 
         nav a {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--warm-bg);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--black);
             text-decoration: none;
-            opacity: 0.8;
+            opacity: 0.7;
             transition: opacity 0.2s;
         }
 
@@ -114,8 +106,8 @@
             justify-content: center;
             text-align: center;
             padding: 120px 40px;
-            background: var(--warm-bg);
-            color: var(--charcoal);
+            background: var(--white);
+            color: var(--black);
         }
 
         .hero-mark {
@@ -144,51 +136,47 @@
         }
 
         .hero h1 {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 36px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            margin-bottom: 20px;
-            line-height: 1;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
 
         .hero .subtitle {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.5em;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            opacity: 0.6;
-            margin-bottom: 40px;
+            opacity: 0.5;
+            margin-bottom: 30px;
         }
 
         .hero .tagline {
-            font-size: 28px;
-            font-style: italic;
-            letter-spacing: 0.05em;
-            opacity: 0.8;
-            margin-bottom: 60px;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            opacity: 0.7;
+            margin-bottom: 50px;
         }
 
         .cta-button {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            background: var(--charcoal);
-            color: var(--warm-bg);
-            padding: 18px 40px;
+            background: var(--black);
+            color: var(--white);
+            padding: 16px 32px;
             border: none;
-            border-radius: 4px;
+            border-radius: 0;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            transition: transform 0.2s;
+            transition: all 0.2s;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
+            background: #333;
         }
 
         /* Section */
@@ -207,27 +195,26 @@
         }
 
         section h2 {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 36px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
             margin-bottom: 60px;
             text-align: center;
         }
 
         section p {
-            font-size: 20px;
-            line-height: 1.8;
-            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            color: var(--text-gray);
         }
 
         blockquote {
-            font-size: 28px;
-            font-style: italic;
+            font-size: 24px;
+            font-weight: 500;
             line-height: 1.5;
             margin: 60px 0;
-            opacity: 0.8;
+            color: var(--black);
             text-align: center;
         }
 
@@ -244,15 +231,14 @@
         }
 
         .speaker h3 {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .speaker p {
-            font-size: 16px;
-            opacity: 0.7;
+            font-size: 15px;
+            color: var(--text-gray);
         }
 
         /* Topics */
@@ -266,46 +252,45 @@
         .topic {
             background: var(--white);
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 0;
+            border: 1px solid #E0E0E0;
         }
 
         .topic h3 {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
         }
 
         .topic p {
-            font-size: 16px;
-            line-height: 1.7;
+            font-size: 15px;
+            line-height: 1.6;
             margin-bottom: 0;
+            color: var(--text-gray);
         }
 
         /* Footer */
         footer {
-            background: var(--charcoal);
-            color: var(--warm-bg);
+            background: var(--black);
+            color: var(--white);
             padding: 60px 40px;
             text-align: center;
         }
 
         footer p {
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            opacity: 0.5;
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.6;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 48px;
+                font-size: 18px;
             }
 
             .hero .tagline {
-                font-size: 20px;
+                font-size: 16px;
             }
 
             nav ul {
@@ -314,6 +299,10 @@
 
             section {
                 padding: 60px 30px;
+            }
+
+            section h2 {
+                font-size: 24px;
             }
         }
     </style>
@@ -336,9 +325,9 @@
     <section class="hero">
         <div class="hero-mark">
             <svg width="120" height="120" viewBox="0 0 240 240">
-                <rect x="0" y="0" width="240" height="240" fill="#4A4A48"/>
+                <rect x="0" y="0" width="240" height="240" fill="#000000"/>
                 <path d="M 0,120 Q 40,88 80,104 Q 120,120 160,92 Q 200,64 240,104" 
-                      fill="none" stroke="#E8E8E5" stroke-width="2.5" stroke-linecap="round"/>
+                      fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
         </div>
         <h1>REVERB CONFERENCE</h1>
